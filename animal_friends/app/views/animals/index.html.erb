@@ -1,0 +1,12 @@
+<h1>Animals Index</h1>
+  <div class="list-group">
+    <% @animals.each do |animal|  %>
+      <div class="list-group-item">
+        <ul class="animal">
+          <li><%= link_to(animal.name, animal_path(animal.id)) %></li>
+          <li><%= link_to('DELETE', animal_path(animal.id)) %></li>
+          <li><%= link_to('EDIT', edit_animal_path(animal.id)) %></li>
+        </ul>
+      </div>
+    <% end %>
+  </div>

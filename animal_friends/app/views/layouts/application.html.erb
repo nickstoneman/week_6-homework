@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AnimalFriends</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<header>
+  <nav>
+    <li><%= link_to('Animals', animals_path) %></li>
+    <li><%= link_to('New Animal', new_animal_path) %></li>
+  </nav>
+</header>
+<%= yield %>
+
+</body>
+</html>
