@@ -5,12 +5,10 @@ class AnimalsController < ApplicationController
   end
 
   def show
-    # This looks up the planet from the db using the id
     @animal = Animal.find(params[:id])
   end
 
   def new
-    # Instantiate a new animal object
     @animal = Animal.new
   end
 
@@ -37,7 +35,6 @@ class AnimalsController < ApplicationController
   end
 
 private 
-  # This method allows us to update all the params at the same time
   def animal_params
     params.require(:animal).permit(:name, :species, :image, :order)
   end
